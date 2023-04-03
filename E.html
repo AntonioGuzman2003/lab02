@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="styles/css/styles.css"/>
+	<link rel="stylesheet" href="styles/css/c.css"/>
+<head>
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="A.html">A</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="b.html">B</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="c.html">C</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="D.html">D</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="E.html">E</a>
+			  </li>
+		  </ul>
+		</div>
+	  </nav>
+	<title> E</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script>
+		function Mayor() {
+			var primero = parseFloat(document.getElementById("primero").value);
+			var segundo = parseFloat(document.getElementById("segundo").value);
+			var tercero = parseFloat(document.getElementById("tercero").value);
+
+			var mayor = primero;
+			if (segundo > mayor) {
+				mayor = segundo;
+			}
+			if (tercero > mayor) {
+				mayor = tercero;
+			}
+			document.getElementById("resultado").innerHTML = "El numero mayor es " + mayor;
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Ingresar 3 numeros</h1>
+		<form>
+			<div>
+				<label for="primero">Numero 1:</label>
+				<input type="number"  id="primero">
+			<break>
+				<label for="segundo">Numero 2:</label>
+				<input type="number"  id="segundo">
+			<break>
+				<label for="tercero">Numero 3:</label>
+				<input type="number"  id="tercero">
+			<button type="button" class="btn btn-primary" onclick="Mayor()">el mayor</button>
+			</div>
+			<p id="resultado"></p>
+		</form>
+	</div>
+</body>
+</html>
